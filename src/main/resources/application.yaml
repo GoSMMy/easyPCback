@@ -1,0 +1,16 @@
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:55255/easyPC
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    change-log: classpath:db/liquibase-changelog.xml
